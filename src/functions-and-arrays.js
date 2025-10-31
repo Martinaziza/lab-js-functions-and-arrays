@@ -77,12 +77,42 @@ function sumNumbers(array) {
 
 const numbers2 = [2, 6, 9, 10, 7, 4, 1, 9];
 
-function averageNumbers() {}
+function averageNumbers(numbersArray) {
+    if (!numbersArray.length){
+        return 0
+    }
+    
+    let sum = 0;
+    for (let i = 0; i < numbersArray.length; i++){
+        sum += numbersArray[i]
+    }
+    return sum/numbersArray.length
+}
+
+console.log(averageNumbers(numbers2))
 
 
 
 
 // Iteration 5 | Find Elements
+//Declare a function named doesWordExist that will take in an array 
+// of words as one argument and a word to search for as the other. 
+// Return true if the word exists in the array; otherwise, return false.
+
+//The function should return null if an empty array is passed as an 
+// argument.
 const words2 = ["machine", "subset", "trouble", "starting", "matter", "eating", "truth", "disobedience"];
 
-function doesWordExist() {}
+function doesWordExist(searchArray, word) {
+    if (!searchArray.length) {
+        return null
+    }
+    for (i=0; i<searchArray.length; i++){
+        if (searchArray.includes(word)){
+            return true
+        } else {
+            return false
+        }
+
+    }
+}
